@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mall Security</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sign-in">
+            <h1>Ace Mall</h1>
+            <p>Only visitors 12 years and above and with a face mask are allowed access</p>
+
+            <form onsubmit="return false">
+                <div class="form-control">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                </div>
+
+                <div class="form-control">
+                    <input type="number" min="1" name="age" id="age" placeholder="Age" required>
+                </div>
+                <div class="form-control">
+                    <label for="face-mask">Are you wearing a face mask?</label>
+                    <select name="face-mask" id="face-mask">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="pocket">It's in my pocket</option>
+                    </select>
+                </div>
+                
+                <button class="btn" type="submit" onclick="return checkUser();">Proceed</button>
+            </form>
+
+            <div class="visits">
+                <div class="visitors" id="total-visitors">Total visits: 0</div>
+                <div class="visitors" id="accepted">Accepted Visitors: 0</div>
+                <div class="visitors" id="denied">Denied Visitors: 0</div>
+            </div>
+        </div>        
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
