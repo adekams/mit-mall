@@ -7,6 +7,8 @@ let username = document.getElementById('name')
         denied = 0
 
         const checkUser = () => { 
+            
+            // alert(select.value)
             if(username.value === '') {
                 alert("Please enter your name")
             }
@@ -19,7 +21,7 @@ let username = document.getElementById('name')
                 document.getElementById('total-visitors').innerHTML =  `Total visits: ${total}` 
             }
             else if (select.value != 'Yes') {
-                alert("You have been denied entry into Ace's") 
+                alert("You have been denied entry into Ace's because you do not have a face mask on") 
 
                 total++
                 document.getElementById('total-visitors').innerHTML =  `Total visits: ${total}`       
